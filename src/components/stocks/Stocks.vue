@@ -1,5 +1,5 @@
 <template>
-  <v-layout row wrap>
+  <v-layout row wrap mt-2>
     <Stock v-for="stock in stocks" :key="stock.id" />
   </v-layout>
 </template>

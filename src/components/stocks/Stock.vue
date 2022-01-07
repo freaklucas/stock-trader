@@ -2,13 +2,13 @@
   <v-flex class="pr-3 pb-3" xs12 md6 lg4>
     <v-card class="green darken-3 white--text">
       <v-card-title class="headline">
-        <strong>Nome da ação <small>(Preço da ação: Preço)</small></strong>
+        <strong>Nome <small>(Preço: Preço)</small></strong>
       </v-card-title>
     </v-card>
-    <v-card class="green darken-3 white--text">
+    <v-card class="white--text">
       <v-container fill-height>
         <v-text-field label="Quantidade" type="number" />
-        <v-btn class="green darken-3 white--text"> Comprar </v-btn>
+        <v-btn class="green darken-3 white--text ml-4"> Comprar </v-btn>
       </v-container>
     </v-card>
   </v-flex>
