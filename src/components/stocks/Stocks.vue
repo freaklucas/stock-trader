@@ -1,6 +1,6 @@
 <template>
   <v-layout row wrap mt-2>
-    <Stock v-for="stock in stocks" :key="stock.id" />
+    <Stock v-for="stock in stocks" :key="stock.id" :stock="stock" />
   </v-layout>
 </template>
 
@@ -13,7 +13,7 @@ export default {
       stocks: [
         { id: 1, name: "MBW", price: 1000 },
         { id: 2, name: "Google", price: 100 },
-        { id: 3, name: "facebook", price: 200 },
+        { id: 3, name: "Facebook", price: 200 },
         { id: 4, name: "Twitter", price: 800 },
       ],
     };
