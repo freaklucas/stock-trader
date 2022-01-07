@@ -15,7 +15,11 @@
           type="number"
           v-model.number="quantity"
         />
-        <v-btn class="green darken-3 white--text ml-4" @click="buyStock">
+        <v-btn
+          class="green darken-3 white--text ml-4"
+          :disabled="quantity <= 0 || !Number.isInteger(quantity)"
+          @click="buyStock"
+        >
           Comprar
         </v-btn>
       </v-container>
