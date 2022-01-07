@@ -1,6 +1,6 @@
 <template>
   <v-app-bar app>
-    <v-toolbar-title class="headline text-uppercase mr-4">
+    <v-toolbar-title class="headline text-uppercase mr-2">
       <span>Stock</span>
       <span class="font-weight-light">Trader</span>
     </v-toolbar-title>
