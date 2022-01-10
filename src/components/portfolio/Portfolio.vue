@@ -1,12 +1,7 @@
 <template>
-  <div>
-    <h1 class="text-no-wrap blue bold" style="width: 9rem">
-      Venda ações quando valorizar :)
-    </h1>
-    <v-layout row wrap mt-2>
-      <Stock v-for="stock in stocks" :key="stock.id" :stock="stock" />
-    </v-layout>
-  </div>
+  <v-layout row wrap mt-2>
+    <Stock v-for="stock in stocks" :key="stock.id" :stock="stock" />
+  </v-layout>
 </template>
 
 <script>
