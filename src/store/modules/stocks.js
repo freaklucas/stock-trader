@@ -8,13 +8,18 @@ export default {
     setStocks(state, stocks) {
       state.stocks = stocks;
     },
-    actions: {
-      buyStock({ commit }) {
-        commit();
-      },
-      initStocks({ commit }) {
-        commit("setStocks", stocks);
-      },
+  },
+  actions: {
+    buyStock({ commit }) {
+      commit();
+    },
+    initStocks({ commit }) {
+      commit("setStocks", stocks);
+    },
+  },
+  getters: {
+    stocks(state) {
+      return state.stocks;
     },
   },
 };
