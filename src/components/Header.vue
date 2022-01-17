@@ -13,7 +13,7 @@
     <v-spacer></v-spacer>
 
     <v-toolbar-items>
-      <v-btn text>Finalizar Dia</v-btn>
+      <v-btn text @click="endDay">Finalizar Dia</v-btn>
       <v-menu offset-y>
         <template v-slot:activator="{ on }">
           <v-btn text v-on="on">Salvar & Carregar</v-btn>
@@ -37,10 +37,18 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   computed: {
     credit() {
       return this.$store.getters.credit;
+    },
+  },
+  methods: {
+    ...mapActions(["randomizeStocks"]),
+    endDay() {
+      this.randomizeStocks();
     },
   },
 };
