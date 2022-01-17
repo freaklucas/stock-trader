@@ -17,7 +17,9 @@
         />
         <v-btn
           class="green darken-3 white--text ml-4"
-          :disabled="quantity <= 0 || !Number.isInteger(quantity)"
+          :disabled="
+            insufficientFunds || quantity <= 0 || !Number.isInteger(quantity)
+          "
           @click="buyStock"
         >
           Comprar
@@ -34,6 +36,14 @@ export default {
     return {
       quantity: 0,
     };
+  },
+  computed: {
+    credit() {
+      return this.$store.getters.credit;
+    },
+    insufficientFunds() {
+      return this.quantity * this.stock.price > this.credit;
+    },
   },
   methods: {
     buyStock() {
