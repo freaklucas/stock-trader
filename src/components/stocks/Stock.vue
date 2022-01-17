@@ -11,6 +11,7 @@
     <v-card class="white--text">
       <v-container fill-height>
         <v-text-field
+          :error="insufficientFunds"
           label="Quantidade"
           type="number"
           v-model.number="quantity"
@@ -22,7 +23,7 @@
           "
           @click="buyStock"
         >
-          Comprar
+          {{ insufficientFunds ? "Insuficiente" : "Comprar" }}
         </v-btn>
       </v-container>
     </v-card>
