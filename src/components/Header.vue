@@ -27,6 +27,21 @@
           </v-list-item>
         </v-list>
       </v-menu>
+      <v-layout align-center>
+        <span class="text-uppercase grey--text text--darken-2">
+          Saldo: {{ credit }}
+        </span>
+      </v-layout>
     </v-toolbar-items>
   </v-app-bar>
 </template>
+
+<script>
+export default {
+  computed: {
+    credit() {
+      return this.$store.getters.credit;
+    },
+  },
+};
+</script>
