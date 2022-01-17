@@ -29,7 +29,7 @@
       </v-menu>
       <v-layout align-center>
         <span class="text-uppercase grey--text text--darken-2">
-          Saldo: {{ credit }}
+          Saldo: {{ credit | currency }}
         </span>
       </v-layout>
     </v-toolbar-items>
