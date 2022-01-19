@@ -26,6 +26,10 @@ export default {
       }
       state.credit += stockPrice * quantity;
     },
+    setPortfolio(state, portfolio) {
+      state.credit = portfolio.credit;
+      state.stocks = portfolio.stockPortfolio ? portfolio.stockPortfolio : [];
+    },
   },
   actions: {
     sellStock({ commit }, order) {
